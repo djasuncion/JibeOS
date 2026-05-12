@@ -21,4 +21,23 @@ function createProject(projectName, targetDir) {
   return projectPath;
 }
 
-module.exports = { createProject };
+function initHere(targetDir) {
+  const projectName = path.basename(targetDir);
+  const files = loadTemplates(projectName);
+  const written = [];
+  const skipped = [];
+
+  for (const { filename, content } of files) {
+    const dest = path.join(targetDir, filename);
+    if (fs.existsSync(dest)) {
+      skipped.push(filename);
+    } else {
+      fs.writeFileSync(dest, content, 'utf8');
+      written.push(filename);
+    }
+  }
+
+  return { written, skipped };
+}
+
+module.exports = { createProject, initHere };

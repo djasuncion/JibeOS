@@ -1,9 +1,9 @@
 {
   "name": "create-jibeos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Scaffold a new JibeOS project with standard markdown files",
   "bin": {
-    "create-jibeos": "./bin/jibeos.js"
+    "create-jibeos": "bin/jibeos.js"
   },
   "files": [
     "bin/",
@@ -14,7 +14,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "test": "node bin/jibeos.js test-project && echo 'Test passed' && rm -rf test-project"
+    "test": "node bin/jibeos.js test-project && echo 'new-project mode: pass' && rm -rf test-project && mkdir -p _here_test && cd _here_test && node ../bin/jibeos.js --here && node ../bin/jibeos.js --here && cd .. && rm -rf _here_test && echo '--here mode: pass'"
   },
   "license": "MIT"
 }

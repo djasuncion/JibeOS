@@ -20,27 +20,30 @@ A single CLI command scaffolds the full project skeleton — README, ROADMAP, MI
 
 ## Usage
 
+**New project** — creates a `my-project/` folder in the current directory:
+
 ```bash
 npx create-jibeos my-project
 ```
 
-Or, after linking locally (see Development below):
+**Existing project** — generates docs into the current working directory without creating a new folder:
 
 ```bash
-create-jibeos my-project
+npx create-jibeos --here
 ```
 
-This creates `./my-project/` in the current directory containing:
+Both modes generate the same set of files:
 
 ```
-my-project/
-  README.md
-  ROADMAP.md
-  MILESTONES.md
-  ARCHITECTURE.md
-  CURRENT_STATE.md
-  AI_WORKFLOW.md
+README.md
+ROADMAP.md
+MILESTONES.md
+ARCHITECTURE.md
+CURRENT_STATE.md
+AI_WORKFLOW.md
 ```
+
+In `--here` mode, any file that already exists is skipped and reported. Nothing is overwritten silently.
 
 ## Development
 
