@@ -1,6 +1,6 @@
 {
   "name": "create-jibeos",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold a new JibeOS project with standard markdown files",
   "bin": {
     "create-jibeos": "./bin/jibeos.js"

@@ -11,6 +11,7 @@ const TEMPLATE_FILES = [
   'MILESTONES.md',
   'ARCHITECTURE.md',
   'CURRENT_STATE.md',
+  'AI_WORKFLOW.md',
 ];
 
 function loadTemplates(projectName) {

@@ -27,6 +27,7 @@ try {
   console.log('  MILESTONES.md');
   console.log('  ARCHITECTURE.md');
   console.log('  CURRENT_STATE.md');
+  console.log('  AI_WORKFLOW.md');
 } catch (err) {
   console.error(`Error: ${err.message}`);
   process.exit(1);

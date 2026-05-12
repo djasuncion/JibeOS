@@ -8,7 +8,7 @@ Starting a new JibeOS project means manually creating the same five documentatio
 
 ## Solution
 
-A single CLI command scaffolds the full project skeleton — README, ROADMAP, MILESTONES, ARCHITECTURE, and CURRENT_STATE — with the project name injected and sensible starter content.
+A single CLI command scaffolds the full project skeleton — README, ROADMAP, MILESTONES, ARCHITECTURE, CURRENT_STATE, and AI_WORKFLOW — with the project name injected and sensible starter content.
 
 ## Tech Stack
 
@@ -39,6 +39,7 @@ my-project/
   MILESTONES.md
   ARCHITECTURE.md
   CURRENT_STATE.md
+  AI_WORKFLOW.md
 ```
 
 ## Development
@@ -64,5 +65,6 @@ Follows [Semantic Versioning](https://semver.org/). All notable changes are reco
 
 - No npm dependencies — keep this zero-dependency
 - Templates live in `templates/` and use `{{PROJECT_NAME}}` as the only interpolation token
+- `AI_WORKFLOW.md` is the AI development guide scaffolded into every generated project; edit `templates/AI_WORKFLOW.md` to change its content
 - Do not publish to npm until explicitly requested
 - Validation rules are in `src/validateProjectName.js` — extend there, not in the bin script
